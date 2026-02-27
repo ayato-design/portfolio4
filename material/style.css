@@ -347,7 +347,7 @@ footer {
         justify-content: center;
         align-items: center;
         position: fixed;
-        top: 30px;
+        top: 40px;
         right: 30px;
         z-index: 100;/* 重なり順を一番上にする */
         cursor: pointer;
@@ -539,3 +539,4 @@ footer {
         margin: 10px 0;
     }
 }
+
