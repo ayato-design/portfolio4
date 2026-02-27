@@ -262,13 +262,13 @@ input[type="submit"] {
 /* Works */
 .works {
     background: #cccccc;
-    height: 700px;
     display: flex;
     padding: 0 15%;
 }
 .works_box {
     display: flex;
     align-items: center;     /* 上下中央 */
+    padding: 50px 0;
 }
 .works_text h3 {
     font-size: 32px;
