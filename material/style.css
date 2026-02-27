@@ -1,0 +1,541 @@
+/* リセットCSS */
+@import url('reset.css');
+
+/* GoogleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 全体 */
+body{
+    background: #E6E6E6;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* 戻るボタン */
+.back_button {
+    font-size: 14px;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    background: #000000;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    opacity: 0; /* 非表示 */
+    transform: translateY(20px);
+    transition: all .5s ease;
+}
+.back_button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 25px;
+    transition: all .5s ease;
+}
+.back_button a:hover {
+    opacity: .7;
+}
+.back_button.is-show {
+    opacity: 1; /* 表示 */
+    transform: translateY(0);
+}
+
+/* ヒーローエリア */
+.hero {
+    background-image: url(hero.png);
+    background-size: cover;
+    height: 700px;
+}
+.menu {
+    display: flex;
+}
+.hero h1 {
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: "Lovers Quarrel", cursive;
+    font-weight: lighter;
+    padding: 20px 100px;
+}
+.hero h1 a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.pc_nav {
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    align-items: center;     /* 上下中央 */
+}
+.pc_nav_menu {
+    display: flex;
+}
+.pc_nav_menu li {
+    list-style: none;
+    padding-left: 20%;
+}
+.pc_nav a {
+    color:#FFFFFF;
+}
+.pc_nav a:hover {
+    color:#cccccc;
+}
+.sm_nav {
+    display: none;
+}
+
+/* 共通見出(h2) */
+h2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 36px;
+    text-align: center;
+    font-weight: normal;
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+h2::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 15px);
+    bottom: 0;
+    width: 35px;
+    height: 1px;
+    background-color: #000000;
+}
+
+/* News */
+.news {
+    padding: 0 15%;
+}
+.news h2 {
+    padding-top: 50px;
+}
+.news dl {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    margin: 50px 0 100px 0;
+}
+.news dl dt {
+    width: 35%;
+    float: left;
+    clear: left;
+    border-top: 1px solid #000000;
+    padding: 30px 0 30px 50px;
+}
+.news dl dd {
+    width: auto;
+    border-top: 1px solid #000000;
+    padding: 30px 0;
+}
+.news_icon {
+    background: #000000;
+    color: #FFFFFF;
+    padding: 1px 5px;
+    margin-left: 20px;
+}
+
+/* About */
+.about {
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    align-items: center;     /* 上下中央 */
+    padding-left: 15%;
+}
+.about_text p {
+    line-height: 30px;
+}
+.about_image {
+    width: 70%;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Business */
+.business h2 {
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+.business_list {
+    display: flex;
+}
+.business_box {
+    width: 25%;
+    position: relative;
+    padding-bottom: 50px;
+}
+.business_box p {
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 80px;
+    left: 45%;
+    transform: translate(-45%);
+}
+
+/* Company */
+.company {
+    padding: 0 15%;
+}
+.company_box {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* 左右中央 */
+}
+.company_add dl {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 25px;
+    margin: 50px 0 100px 0;
+}
+.company_add dl dt {
+    width: 20%;
+    padding: 10px 0 10px 0px;
+}
+.company_add dl dd {
+    width: 80%;
+    padding: 10px 0;
+}
+.company_map {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+}
+
+/* Contact */
+.contact {
+    padding: 0 15%;
+}
+.mailform_text p {
+    line-height: 25px;
+}
+.mailform_text {
+    padding-bottom: 30px;
+    width: 500px;
+    margin: 0 auto;
+}
+.form_item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+.form_item label {
+    width: 150px;
+}
+.form_item .message {
+    align-self: flex-start;
+}
+.form_item input, .form_item textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background: #FFFFFF;
+    width: 100%;
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+.tel {
+    font-size: medium;
+    background: linear-gradient(transparent 80%, #999999 0%);
+    margin: 0 5px;
+}
+.red {
+    color: #FF0000;
+}
+
+/* Works */
+.works {
+    background: #cccccc;
+    height: 700px;
+    display: flex;
+    padding: 0 15%;
+}
+.works_box {
+    display: flex;
+    align-items: center;     /* 上下中央 */
+}
+.works_text h3 {
+    font-size: 32px;
+    font-family: "Noto Serif JP", serif;
+    margin: 20px 0;
+}
+.works_text {
+    line-height: 25px;
+}
+.works_text p {
+    padding-bottom: 20px;
+}
+.works_text ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.works_text ul li {
+    display: inline;
+}
+.works_text ul li::after {
+    content: "/";
+    margin: 0 5px;
+    color: #000000;
+}
+.works_text ul li:last-child::after {
+    content: "";
+}
+.works a {
+    color:#000000;
+}
+.works a:hover{
+    color:#E6E6E6;
+}
+
+/* フッター */
+footer {
+    background: #000000;
+    color: #FFFFFF;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    align-items: center;     /* 上下中央 */
+    line-height: auto;
+}
+
+@media screen and (max-width: 900px) {
+    /* 全体 */
+    body {
+        font-size: 13px;
+    }
+
+    /* 戻るボタン */
+    .back_button {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    /* ハンバーガーメニュー */
+    .pc_nav {
+        display: none;
+    }
+    .sm_nav {
+        display: block;
+    }
+    .sm_nav_check {
+        display: none;
+    }
+    .sm_nav_open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 100;/* 重なり順を一番上にする */
+        cursor: pointer;
+    }
+    .sm_nav_open span, .sm_nav_open span:before, .sm_nav_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #FFFFFF;
+        transition: 0.5s;
+        position: absolute;
+    }
+    .sm_nav_open span:before {
+        bottom: 8px; /* 三本線の一番上の棒の位置調整 */
+    }
+    .sm_nav_open span:after {
+        top: 8px; /* 三本線の一番下の棒の位置調整 */
+    }
+    #sm_nav_input:checked ~ .sm_nav_open span {
+        background: rgb(255, 255, 255, 0); /* アイコンがクリックされたら真ん中の線を透明にする */
+    }
+    #sm_nav_input:checked ~ .sm_nav_open span::before {
+        bottom: 0;
+        transform: rotate(45deg); /* アイコンがクリック後上下の線を回転 */
+    }
+    #sm_nav_input:checked ~ .sm_nav_open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    /* メニューのデザイン*/
+    .sm_nav_box {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        bottom: 100%;
+        left: 0%; /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #E6E6E6;
+        transition: .5s;
+        list-style: none;
+    }
+    .sm_nav_menu {
+        display: block;
+        flex-direction: column;
+    }
+    .sm_nav_menu {
+        padding: 0 5%;
+        margin-top: 100px;
+    }
+    .sm_nav_menu li {
+        text-align: center;
+        border-top: 1px solid #000000;
+        padding: 30px;
+    }
+    .sm_nav_menu li:last-child {
+        border-bottom: 1px solid #000000;
+    }
+    .sm_nav_menu a {
+    color: #000000;
+    text-decoration: none;
+    }
+
+    /* アイコンがクリックされたらメニューを表示 */
+    #sm_nav_input:checked ~ .sm_nav_box {
+    bottom: 0;/* メニューを画面に入れる */
+    }
+    
+    .hero {
+        height: auto;
+    }
+    
+    /* News */
+    .news {
+        padding: 0 5%;
+    }
+    .news dl {
+        margin: 30px 0 50px 0;
+    }
+    .news dl dt {
+        width: 30%;
+        padding: 10px 0 10px 20px;
+    }
+    .news dl dd {
+        width: au;
+        padding: 10px 0;
+    }
+    .news_icon {
+        display: none;
+    }
+
+    /* About */
+    .about {
+        background-image: url(about.png);
+        background-size: cover;
+        padding: 0 5%;
+    }
+    .about_text {
+        color: #FFFFFF;
+        margin: 5% 0;
+    }
+    .about_text h2::after {
+    background-color: #FFFFFF;
+    }
+    .about_image {
+        display: none;
+    }
+
+    /* Business */
+    .business_box p {
+    writing-mode: vertical-rl; /* 右から左へ縦書き */
+    text-orientation: upright; /* 文字を直立させる */
+    }
+
+    /* Company */
+    .company {
+        padding: 0 5%;
+    }
+    .company_box {
+        display: block;
+    }
+    .company_add dl {
+    margin: 50px 0 30px 0;
+    }
+    .company_map {
+        width: 100%;
+        height: 350px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding: 0 5%;
+    }
+    .mailform_text {
+    padding-bottom: 30px;
+    width: auto;
+    margin: 0 auto;
+    }
+    .form_item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .form_item input, .form_item textarea {
+        width: 95%;
+    }
+
+    /* Works */
+    .works {
+        height: auto;
+        padding: 50px 5%;
+    }
+    .works_text h3 {
+        font-size: 23px;
+    }
+    .works ul {
+        flex-wrap: wrap;
+    }
+    .works_box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .works_image {
+        width: 60%;
+        margin: 30px auto 0 auto;
+    }
+
+    /* フッター */
+    footer {
+        padding: 0 5%;
+    }
+    
+    .footer_box {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .footer_text {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer_add {
+        margin-left: 0; 
+        margin: 10px 0;
+    }
+}
