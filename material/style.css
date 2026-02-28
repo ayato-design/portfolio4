@@ -241,6 +241,9 @@ h2::after {
     border: 1px solid #cccccc;
     border-radius: 4px;
 }
+.form_item textarea {
+    height: 250px;
+}
 input[type="submit"] {
     background: #FFFFFF;
     width: 100%;
@@ -537,4 +540,3 @@ footer {
         font-size: 23px;
     }
 }
-
