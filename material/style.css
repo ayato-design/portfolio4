@@ -5,12 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* 全体 */
-body{
+body {
     background: #E6E6E6;
     font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
 }
-img{
+img {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
@@ -418,7 +418,7 @@ footer {
         height: auto;
     }
     .hero h1 {
-        padding: 20px 50px;
+        padding: 20px;
     }
     
     /* News */
@@ -454,7 +454,7 @@ footer {
         margin: 30px 0;
     }
     .about_text h2::after {
-    background-color: #FFFFFF;
+        background-color: #FFFFFF;
     }
     .about_image {
         display: none;
@@ -465,8 +465,8 @@ footer {
         padding-top: 30px;
     }
     .business_box p {
-    writing-mode: vertical-rl; /* 右から左へ縦書き */
-    text-orientation: upright; /* 文字を直立させる */
+        writing-mode: vertical-rl; /* 右から左へ縦書き */
+        text-orientation: upright; /* 文字を直立させる */
     }
 
     /* Company */
@@ -477,7 +477,7 @@ footer {
         display: block;
     }
     .company_add dl {
-    margin: 50px 0 30px 0;
+        margin: 50px 0 30px 0;
     }
     .company_map {
         width: 100%;
