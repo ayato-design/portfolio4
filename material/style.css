@@ -52,45 +52,96 @@ img {
     transform: translateY(0);
 }
 
+/* ボタン */
+.button a {
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+.button a:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+/* パンくずリスト */
+.pan_list {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+.pan_list li {
+    display: inline;
+}
+.pan_list li::after {
+    content: ">";
+    margin: 0 5px;
+    color: #000000;
+}
+.pan_list li:last-child::after {
+    content: "";
+}
+
+/* リンク */
+a {
+    color:#000000;
+}
+a:hover {
+    color:#cccccc;
+}
+
 /* ヒーローエリア */
 .hero {
     background-image: url(hero.png);
     background-size: cover;
     height: 700px;
 }
-.menu {
+.hero_small {
+    background: #000000;
+}
+.menu, .hero_small .menu {
     display: flex;
 }
-.hero h1 {
+.hero h1, .hero_small h1 {
     color: #FFFFFF;
     font-size: 50px;
     font-family: "Lovers Quarrel", cursive;
     font-weight: lighter;
     padding: 20px 100px;
 }
-.hero h1 a {
+.hero h1 a, .hero_small h1 a {
     color: #FFFFFF;
     text-decoration: none;
 }
-.pc_nav {
+.pc_nav, .hero_small .pc_nav {
     display: flex;
     justify-content: center; /* 左右中央 */
     align-items: center;     /* 上下中央 */
 }
-.pc_nav_menu {
+.pc_nav_menu, .hero_small .pc_nav_menu {
     display: flex;
 }
-.pc_nav_menu li {
+.pc_nav_menu li, .hero_small .pc_nav_menu  li {
     list-style: none;
     padding-left: 20%;
 }
-.pc_nav a {
+.pc_nav a, .hero_small .pc_nav a {
     color:#FFFFFF;
 }
-.pc_nav a:hover {
+.pc_nav a:hover, .hero_small .pc_nav a:hover {
     color:#cccccc;
 }
-.sm_nav {
+.sm_nav, .hero_small .sm_nav {
     display: none;
 }
 
@@ -116,7 +167,7 @@ h2::after {
 }
 
 /* News */
-.news {
+.news, .news_list {
     padding: 0 15%;
 }
 .news h2 {
@@ -125,7 +176,7 @@ h2::after {
 .news dl {
     width: 100%;
     border-bottom: 1px solid #000000;
-    margin: 50px 0 100px 0;
+    margin: 50px 0 30px 0;
 }
 .news dl dt {
     width: 35%;
@@ -144,6 +195,74 @@ h2::after {
     color: #FFFFFF;
     padding: 1px 5px;
     margin-left: 20px;
+}
+.news .button {
+    margin-bottom: 100px;
+}
+/* NEWS(一覧) */
+.news_list_box {
+    padding: 30px 0;
+}
+.news_itemlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+.news_image {
+    margin-bottom: 10px;
+}
+.news_image img:hover {
+    opacity: .5;
+}
+.news_itemtext {
+    line-height: 20px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+.pagenation {
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    margin-bottom: 30px;
+}
+.pagenation li {
+    padding: 10px;
+    margin-left: 10px;
+}
+.nowpage {
+    background: #000000;
+    color: #FFFFFF;
+}
+/* NEWS(個別) */
+.news_list h3 {
+    font-size: 25px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+.news_img {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.news_img img {
+    width: 70%;
+}
+.news_text h4 {
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+.news_text p {
+    line-height: 20px;
+}
+.news_text {
+    padding-bottom: 30px;
+}
+.pkai {
+    padding-bottom: 10px;
 }
 
 /* About */
@@ -333,16 +452,16 @@ footer {
     }
 
     /* ハンバーガーメニュー */
-    .pc_nav {
+    .pc_nav, .hero_small .pc_nav {
         display: none;
     }
-    .sm_nav {
+    .sm_nav, .hero_small .sm_nav {
         display: block;
     }
-    .sm_nav_check {
+    .sm_nav_check, .hero_small .sm_nav_check {
         display: none;
     }
-    .sm_nav_open {
+    .sm_nav_open, .hero_small .sm_nav_open {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -352,7 +471,8 @@ footer {
         z-index: 100;/* 重なり順を一番上にする */
         cursor: pointer;
     }
-    .sm_nav_open span, .sm_nav_open span:before, .sm_nav_open span:after {
+    .sm_nav_open span, .sm_nav_open span:before, .sm_nav_open span:after,
+    .hero_small .sm_nav_open span, .hero_small .sm_nav_open span:before, .hero_small .sm_nav_open span:after {
         content: '';
         display: block;
         height: 3px;
@@ -362,26 +482,31 @@ footer {
         transition: 0.5s;
         position: absolute;
     }
-    .sm_nav_open span:before {
+    .sm_nav_open span:before,
+    .hero_small .sm_nav_open span:before {
         bottom: 8px; /* 三本線の一番上の棒の位置調整 */
     }
-    .sm_nav_open span:after {
+    .sm_nav_open span:after,
+    .hero_small .sm_nav_open span:after {
         top: 8px; /* 三本線の一番下の棒の位置調整 */
     }
-    #sm_nav_input:checked ~ .sm_nav_open span {
+    #sm_nav_input:checked ~ .sm_nav_open span,
+    .hero_small #sm_nav_input:checked ~ .hero_small .sm_nav_open span {
         background: rgb(255, 255, 255, 0); /* アイコンがクリックされたら真ん中の線を透明にする */
     }
-    #sm_nav_input:checked ~ .sm_nav_open span::before {
+    #sm_nav_input:checked ~ .sm_nav_open span::before,
+    .hero_small #sm_nav_input:checked ~ .hero_small .sm_nav_open span::before {
         bottom: 0;
         transform: rotate(45deg); /* アイコンがクリック後上下の線を回転 */
     }
-    #sm_nav_input:checked ~ .sm_nav_open span::after {
+    #sm_nav_input:checked ~ .sm_nav_open span::after,
+    .hero_small #sm_nav_input:checked ~ .sm_nav_open span::after {
         top: 0;
         transform: rotate(-45deg);
     }
     
     /* メニューのデザイン*/
-    .sm_nav_box {
+    .sm_nav_box, .hero_small .sm_nav_box {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -392,15 +517,13 @@ footer {
         transition: .5s;
         list-style: none;
     }
-    .sm_nav_menu {
+    .sm_nav_menu, .hero_small .sm_nav_menu {
         display: block;
         flex-direction: column;
-    }
-    .sm_nav_menu {
         padding: 0 5%;
         margin-top: 100px;
     }
-    .sm_nav_menu li {
+    .sm_nav_menu li, .hero_small .sm_nav_menu li {
         text-align: center;
         border-top: 1px solid #000000;
         padding: 30px;
@@ -408,25 +531,26 @@ footer {
     .sm_nav_menu li:last-child {
         border-bottom: 1px solid #000000;
     }
-    .sm_nav_menu a {
+    .sm_nav_menu a, .hero_small .sm_nav_menu a {
     color: #000000;
     text-decoration: none;
     }
 
     /* アイコンがクリックされたらメニューを表示 */
-    #sm_nav_input:checked ~ .sm_nav_box {
+    #sm_nav_input:checked ~ .sm_nav_box,
+    .hero_small #sm_nav_input:checked ~ .hero_small .sm_nav_box{
     bottom: 0;/* メニューを画面に入れる */
     }
     
-    .hero {
+    .hero, .hero_small {
         height: auto;
     }
-    .hero h1 {
+    .hero h1, .hero_small h1 {
         padding: 20px;
     }
     
     /* News */
-    .news {
+    .news, .news_list {
         padding: 0 5%;
     }
     .news h2 {
@@ -445,6 +569,23 @@ footer {
     }
     .news_icon {
         display: none;
+    }
+    .news .button {
+        margin-bottom: 30px;
+    }
+        /* NEWS(一覧) */
+    .news_itemlist {
+        grid-template-columns: 1fr;
+    }
+    /* NEWS(個別) */
+    .news_list h3 {
+        font-size: 20px;
+    }
+    .news_img img {
+        width: 100%;
+    }
+    .news_text h4 {
+        font-size: 18px;
     }
 
     /* About */
