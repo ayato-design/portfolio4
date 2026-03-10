@@ -259,10 +259,23 @@ h2::after {
     line-height: 20px;
 }
 .news_text {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 .pkai {
     padding-bottom: 10px;
+}
+.nb {
+    display: flex;
+    list-style: none;
+    border-top: 1px solid #000000; 
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+.nb li {
+    width: 50%;
+}
+.nb li:last-child {
+    text-align: right;
 }
 
 /* About */
