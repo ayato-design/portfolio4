@@ -174,21 +174,18 @@ h2::after {
     padding-top: 50px;
 }
 .news dl {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    border-top: 1px solid #000000;
+    padding-bottom: 30px;
+}
+
+.news dt, .news dd {
     border-bottom: 1px solid #000000;
-    margin: 50px 0 30px 0;
+    padding: 20px 0;
 }
-.news dl dt {
-    width: 35%;
-    float: left;
-    clear: left;
-    border-top: 1px solid #000000;
-    padding: 30px 0 30px 50px;
-}
-.news dl dd {
-    width: auto;
-    border-top: 1px solid #000000;
-    padding: 30px 0;
+.news dt {
+    padding-left: 10px;
 }
 .news_icon {
     background: #000000;
@@ -570,18 +567,15 @@ footer {
         padding-top: 30px;
     }
     .news dl {
-        margin: 30px 0 30px 0;
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
     }
-    .news dl dt {
-        width: 30%;
-        padding: 10px 0 10px 20px;
+    .news dt {
+        border: none;
+        padding: 20px 10px 10px 0;
     }
-    .news dl dd {
-        width: au;
-        padding: 10px 0;
-    }
-    .news_icon {
-        display: none;
+    .news dd {
+        padding-top: 0;
     }
     .news .button {
         margin-bottom: 30px;
