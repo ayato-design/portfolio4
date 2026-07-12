@@ -10,6 +10,9 @@ body {
     font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
 }
+p {
+    line-height: 1.5;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -18,11 +21,11 @@ img {
 
 /* 戻るボタン */
 .back_button {
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Orbitron", sans-serif;
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 20%;
     background: #000000;
     position: fixed;
@@ -41,7 +44,6 @@ img {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    font-size: 25px;
     transition: all .5s ease;
 }
 .back_button a:hover {
@@ -252,9 +254,6 @@ h2::after {
     font-weight: normal;
     padding-bottom: 20px;
 }
-.news_text p {
-    line-height: 20px;
-}
 .news_text {
     padding-bottom: 20px;
 }
@@ -281,9 +280,6 @@ h2::after {
     justify-content: center; /* 左右中央 */
     align-items: center;     /* 上下中央 */
     padding-left: 15%;
-}
-.about_text p {
-    line-height: 30px;
 }
 .about_image {
     width: 70%;
@@ -343,9 +339,6 @@ h2::after {
 /* Contact */
 .contact {
     padding: 0 15%;
-}
-.mailform_text p {
-    line-height: 25px;
 }
 .mailform_text {
     padding-bottom: 30px;
@@ -435,7 +428,7 @@ input[type="submit"] {
 .works a {
     color:#000000;
 }
-.works a:hover{
+.works a:hover {
     color:#E6E6E6;
 }
 
@@ -453,13 +446,6 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-
-    /* 戻るボタン */
-    .back_button {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
 
     /* ハンバーガーメニュー */
     .pc_nav, .hero_small .pc_nav {
@@ -580,11 +566,11 @@ footer {
     .news .button {
         margin-bottom: 30px;
     }
-        /* NEWS(一覧) */
+        /* News(一覧) */
     .news_itemlist {
         grid-template-columns: 1fr;
     }
-    /* NEWS(個別) */
+    /* News(個別) */
     .news_list h3 {
         font-size: 20px;
     }
@@ -638,7 +624,7 @@ footer {
         margin-bottom: 50px;
     }
 
-    /* CONTACT */
+    /* Contact */
     .contact {
         padding: 0 5%;
     }
@@ -653,6 +639,9 @@ footer {
     }
     .form_item input, .form_item textarea {
         width: 95%;
+    }
+    .form_item textarea {
+        height: 30%;
     }
 
     /* Works */
@@ -682,6 +671,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
+    /* 戻るボタン */
+    .back_button {
+    right: 10px;
+    bottom: 10px;
+}
 
     /* Works */
     .works_text h3 {
