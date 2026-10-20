@@ -522,7 +522,7 @@ footer {
     .sm_nav_menu li, .hero_small .sm_nav_menu li {
         text-align: center;
         border-top: 1px solid #000000;
-        padding: 30px;
+        padding: 10%;
     }
     .sm_nav_menu li:last-child {
         border-bottom: 1px solid #000000;
