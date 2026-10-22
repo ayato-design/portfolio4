@@ -41,66 +41,74 @@
         </div>
     </header>
 <main>
-<section class="news_list">
-    <div class="news_list_box">
-        <ul class="pan_list">
-            <li><a href="index.html">Home</a></li>
-            <li>ニュース</li>
-        </ul>
-        <h2>News</h2>
-        <div class="news_itemlist">
-            <div class="news_item">
-                <div class="news_image">
-                    <a href="news1.html"><img src="material/news-1.png" alt="ink and line"></a>
-                </div>
-                <div class="news_itemtext">
-                    <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">PRES</span><br>
-                    <p>新商品発売のお知らせ。</p>
-                </div>
+    <div class="top_content">
+        <div class="pan_list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>ニュース</li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h2>News</h2>
+            <div class="filter">
+                <button class="filter_btn is-active" data-filter="all">All</button>
+                <button class="filter_btn" data-filter="news">NEWS</button>
+                <button class="filter_btn" data-filter="pres">PRES</button>
             </div>
-            <div class="news_item">
-                <div class="news_image">
-                    <a href="news2.html"><img src="material/news-2.png" alt="ink and line"></a>
+            <div class="news_itemlist">
+                <div class="news_item" data-category="pres">
+                    <div class="news_image">
+                        <a href="news1.html"><img src="material/news-1.png" alt="ink and line"></a>
+                    </div>
+                    <div class="news_itemtext">
+                        <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">PRES</span><br>
+                        <p>新商品発売のお知らせ。</p>
+                    </div>
                 </div>
-                <div class="news_itemtext">
-                    <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
-                    <p>実店舗、10%OFFセール開催決定。</p>
+                <div class="news_item" data-category="news">
+                    <div class="news_image">
+                        <a href="news2.html"><img src="material/news-2.png" alt="ink and line"></a>
+                    </div>
+                    <div class="news_itemtext">
+                        <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
+                        <p>実店舗、10%OFFセール開催決定。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="news_item">
-                <div class="news_image">
-                    <a href="news3.html"><img src="material/news-3.png" alt="ink and line"></a>
+                <div class="news_item" data-category="news">
+                    <div class="news_image">
+                        <a href="news3.html"><img src="material/news-3.png" alt="ink and line"></a>
+                    </div>
+                    <div class="news_itemtext">
+                        <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
+                        <p>イベント出典のお知らせ。</p>
+                    </div>
                 </div>
-                <div class="news_itemtext">
-                    <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
-                    <p>イベント出典のお知らせ。</p>
+                <div class="news_item" data-category="news">
+                    <div class="news_image">
+                        <img src="material/news-4.png" alt="ink and line">
+                    </div>
+                    <div class="news_itemtext">
+                        <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
+                        <p>インクイベントのお知らせ。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="news_item">
-                <div class="news_image">
-                    <img src="material/news-4.png" alt="ink and line">
+                <div class="news_item" data-category="pres">
+                    <div class="news_image">
+                        <img src="material/news-5.png" alt="ink and line">
+                    </div>
+                    <div class="news_itemtext">
+                        <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">PRES</span><br>
+                        <p>新商品発売のお知らせ。</p>
+                    </div>
                 </div>
-                <div class="news_itemtext">
-                    <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
-                    <p>インクイベントのお知らせ。</p>
-                </div>
-            </div>
-            <div class="news_item">
-                <div class="news_image">
-                    <img src="material/news-5.png" alt="ink and line">
-                </div>
-                <div class="news_itemtext">
-                    <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">PRES</span><br>
-                    <p>新商品発売のお知らせ。</p>
-                </div>
-            </div>
-            <div class="news_item">
-                <div class="news_image">
-                    <img src="material/no_image.png" alt="ink and line">
-                </div>
-                <div class="news_itemtext">
-                    <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
-                    <p>当社を偽ったメールにご注意下さい。</p>
+                <div class="news_item" data-category="news">
+                    <div class="news_image">
+                        <img src="material/no_image.png" alt="ink and line">
+                    </div>
+                    <div class="news_itemtext">
+                        <time datetime="2021-01-01">2021.01.01</time><span class="news_icon">NEWS</span><br>
+                        <p>当社を偽ったメールにご注意下さい。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,15 +118,14 @@
             <li>2</li>
             <li>&raquo;</li>
         </ul>
-        <div class="button">
-            <a href="index.html">戻る</a>
+        <div class="back_page">
+            <div class="back_link"><a href="index.html">戻る</a></div>
         </div>
     </div>
-</section>
 </main>
 <div class="back_button"><a href="#top">↑<br>Top</a></div>
-    <footer>
-        <p>© 2026 Portfolio Study & Practice Project<br>This site is a personal learning project.</p>
-    </footer>
+<footer>
+    <p>© 2026 Portfolio Study & Practice Project<br>This site is a personal learning project.</p>
+</footer>
  </body>
 </html>

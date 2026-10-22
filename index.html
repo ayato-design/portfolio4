@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
  <head>
-      <link rel="stylesheet" href="material/style.css">
-      <link rel="icon" href="material/favicon.ico">
-   <title>ink and line(Study Project)</title>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width,initial-scale=1">
-   <meta property="og:image" content="material/ogp.png">
-   <meta property="og:title" content="ink and line(Study Project)">
-   <meta property="og:description" content="手帳と万年筆をメインに取り扱う、架空の文房具店のポートフォリオ作品">
-   <meta property="og:url" content="https://ayato-design.github.io/portfolio4/">
-   <meta property="og:type" content="website">
+    <link rel="stylesheet" href="material/style.css">
+    <link rel="icon" href="material/favicon.ico">
+    <title>ink and line(Study Project)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="material/ogp.png">
+    <meta property="og:title" content="ink and line(Study Project)">
+    <meta property="og:description" content="手帳と万年筆をメインに取り扱う、架空の文房具店のポートフォリオ作品">
+    <meta property="og:url" content="https://ayato-design.github.io/portfolio4/">
+    <meta property="og:type" content="website">
  </head>
  <body>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
@@ -30,7 +30,7 @@
             </nav>
         </div>
         <!-- ハンバーガーメニュー/レスポンシブのみ -->
-         <div class="sm_nav">
+        <div class="sm_nav">
             <input id="sm_nav_input" class="sm_nav_check" type="checkbox">
             <label for="sm_nav_input" class="sm_nav_open"><span></span></label>
             <nav class="sm_nav_box">
@@ -55,8 +55,8 @@
             <dt><time datetime="2021-01-01">2021.01.01</time></dt>
             <dd><a href="news3.html">イベント出典のお知らせ。</a><span class="news_icon">NEWS</span></dd>
         </dl>
-        <div class="button">
-            <a href="news.html">ニュース一覧</a>
+        <div class="back_page">
+            <div class="back_link"><a href="news.html">ニュース一覧</a></div>
         </div>
     </section>
     <section class="about" id="about">
@@ -162,15 +162,16 @@
         </div>
     </section>
     <section class="works" id="works">
-        <div class="works_box">
-            <div class="works_text">
-                <h3>ink and line(Study Project)</h3>
-                <p>万年筆、手帳、ノートを中心に取り扱う架空文房具店(ink and line)のLP型企業サイト。<br>
-                    内容は以前製作した物と同じですが、デザイン違いで製作しました。<br>
-                    今迄実装していなかった機能(ハンバーガーメニューなど)を意識してデザインしました。<br>
-                    これ迄と同様に、Figmaでの構成設計からHTML / CSSによるコーディングまでを行いました。</p>
-                    <p>使用技術</p>
-                    <ul>
+        <div class="top_content">
+            <div class="main_content_end works_box">
+                <div class="works_text">
+                    <h3>ink and line(Study Project)</h3>
+                    <p>万年筆、手帳、ノートを中心に取り扱う架空文房具店(ink and line)のLP型企業サイト。</p>
+                    <p>内容は以前製作した物と同じですが、デザイン違いで製作しました。</p>
+                    <p>今迄実装していなかった機能(ハンバーガーメニューなど)を意識してデザインしました。</p>
+                    <p>これ迄と同様に、Figmaでの構成設計からHTML / CSSによるコーディングまでを行いました。</p>
+                    <h4>使用技術</h4>
+                    <ul class="normal_list">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript(basic)</li>
@@ -178,8 +179,8 @@
                         <li>Figma</li>
                         <li>Canva</li>
                     </ul>
-                    <p>素材提供</p>
-                    <ul>
+                    <h4>素材提供</h4>
+                    <ul class="normal_list">
                         <li><a href="https://pixabay.com/ja/" target="_blank">Pixabay</a></li>
                         <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
                         <li><a href="https://html5doctor.com/html-5-reset-stylesheet/" target="_blank">HTML5 Dotcor</a></li>
@@ -191,7 +192,8 @@
                     <img src="material/logo.png">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
     <div class="back_button"><a href="#top">↑<br>Top</a></div>
     <footer>
