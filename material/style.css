@@ -225,6 +225,7 @@ h2::after {
 .news .button {
     margin-bottom: 100px;
 }
+
 /* NEWS(一覧) */
 .news_item.is-hidden {
     display: none;
@@ -238,7 +239,7 @@ h2::after {
     color: #000000;
     background: #E6E6E6;
     min-width: 50px;
-    border: 1px solid #E6E6E6;
+    border: 1px solid #000000;
     cursor: pointer;
     padding: 3px 10px;
 }
