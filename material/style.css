@@ -197,12 +197,6 @@ h2::after {
 }
 
 /* News */
-.news {
-    padding: 0 15%;
-}
-.news h2 {
-    padding-top: 50px;
-}
 .news dl {
     display: grid;
     grid-template-columns: 25% 75%;
@@ -221,9 +215,6 @@ h2::after {
     color: #FFFFFF;
     padding: 1px 5px;
     margin-left: 20px;
-}
-.news .button {
-    margin-bottom: 100px;
 }
 
 /* NEWS(一覧) */
@@ -351,9 +342,6 @@ h2::after {
 }
 
 /* Company */
-.company {
-    padding: 0 15%;
-}
 .company_box {
     display: flex;
     width: 100%;
@@ -380,12 +368,9 @@ h2::after {
 }
 
 /* Contact */
-.contact {
-    padding: 0 15%;
-}
 .mailform_text {
-    padding-bottom: 30px;
     width: 500px;
+    padding-bottom: 30px;
     margin: 0 auto;
 }
 .form_item {
@@ -574,12 +559,6 @@ footer {
     }
     
     /* News */
-    .news, .news_list {
-        padding: 0 5%;
-    }
-    .news h2 {
-        padding-top: 30px;
-    }
     .news dl {
         grid-template-columns: 1fr;
         margin-bottom: 0;
@@ -594,10 +573,12 @@ footer {
     .news .button {
         margin-bottom: 30px;
     }
-        /* News(一覧) */
+    
+    /* News(一覧) */
     .news_itemlist {
         grid-template-columns: 1fr;
     }
+
     /* News(個別) */
     .news_list h3 {
         font-size: 20px;
@@ -636,9 +617,6 @@ footer {
     }
 
     /* Company */
-    .company {
-        padding: 0 5%;
-    }
     .company_box {
         display: block;
     }
@@ -653,9 +631,6 @@ footer {
     }
 
     /* Contact */
-    .contact {
-        padding: 0 5%;
-    }
     .mailform_text {
         width: auto;
         padding-bottom: 30px;
