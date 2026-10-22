@@ -33,3 +33,28 @@ $(document).ready(function () {
         return false;
     });
 });
+
+// News絞り込み(元：Claude生成)
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter_btn');
+    const items = document.querySelectorAll('.news_item');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            // ボタンの見た目切り替え
+            buttons.forEach(b => b.classList.remove('is-active'));
+            button.classList.add('is-active');
+
+            // カードの表示切り替え
+            items.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.classList.remove('is-hidden');
+                } else {
+                    item.classList.add('is-hidden');
+                }
+            });
+        });
+    });
+});
