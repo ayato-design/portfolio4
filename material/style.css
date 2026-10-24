@@ -230,7 +230,7 @@ h2::after {
     color: #000000;
     background: #E6E6E6;
     min-width: 50px;
-    border: 1px solid #000000;
+    border: 1px solid #E6E6E6;
     cursor: pointer;
     padding: 3px 10px;
 }
