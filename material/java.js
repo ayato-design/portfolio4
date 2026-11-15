@@ -58,3 +58,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// header呼び出し(元：Claude生成)
+(function () {
+  // このJSファイル自身のURLから、サイトのルートを割り出す
+  const scriptSrc = document.currentScript.src;
+  // 例: https://ユーザー名.github.io/リポジトリ名/material/include.js
+  //  → https://ユーザー名.github.io/リポジトリ名/
+  const root = scriptSrc.replace(/material\/[^\/]*$/, '');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('header');
+    if (!target) return;
+
+    fetch(root + 'header.html')
+      .then(res => {
+        if (!res.ok) throw new Error('読み込み失敗: ' + res.status);
+        return res.text();
+      })
+      .then(html => {
+        target.innerHTML = html;
+        // ハンバーガーメニューの初期化はここで呼ぶ
+        // initMenu();
+        target.innerHTML = html;
+        target.querySelectorAll('a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        // 外部リンクやページ内リンクは触らない
+        if (/^(https?:|#|mailto:)/.test(href)) return;
+        a.setAttribute('href', root + href);
+        });
+      })
+      .catch(err => console.error(err));
+  });
+})();
+
+// footer呼び出し(元：Web Drawer)
+function footer(){
+var html = "";
+html += '<footer>';
+html += '<p>© 2026 Portfolio Study & Practice Project<br>This site is a personal learning project.</p>';
+html += '</footer>';
+document.write(html);
+}
