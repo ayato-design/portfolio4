@@ -141,11 +141,38 @@ function initMenu(scope = document) {
   });
 })();
 
-// footer呼び出し(元：Web Drawer)
-function footer(){
-var html = "";
-html += '<footer>';
-html += '<p>© 2026 Portfolio Study & Practice Project<br>This site is a personal learning project.</p>';
-html += '</footer>';
-document.write(html);
-}
+// footer呼び出し(元：Claude生成)
+(function () {
+  const scriptSrc = document.currentScript.src;
+  const root = scriptSrc.replace(/material\/[^\/]*$/, '');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('footer');
+
+    // index.html など、共通ヘッダーを使わないページはそのままメニューだけ初期化
+    if (!target) {
+      initMenu();
+      return;
+    }
+
+    fetch(root + 'footer.html')
+      .then(res => {
+        if (!res.ok) throw new Error('読み込み失敗: ' + res.status);
+        return res.text();
+      })
+      .then(html => {
+        target.innerHTML = html;
+
+        target.querySelectorAll('a[href]').forEach(a => {
+          const href = a.getAttribute('href');
+          // 外部リンクやページ内リンクは触らない
+          if (/^(https?:|#|mailto:)/.test(href)) return;
+          a.setAttribute('href', root + href);
+        });
+
+        // ヘッダーが挿入された「後」でメニューを初期化
+        initMenu();
+      })
+      .catch(err => console.error(err));
+  });
+})();
