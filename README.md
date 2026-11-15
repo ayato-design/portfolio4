@@ -50,6 +50,7 @@
 - HTML5 Dotcor
 - WEBデザインMATOME
 - SACOCHAN-DESIGN.COM
+- Web Drawer
 
 ## 補足
 本作品は学習目的の模写であり、商用利用はしていません。
