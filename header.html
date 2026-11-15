@@ -9,7 +9,7 @@
  </head>
  <body>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
-    <script src="material/java.js"></script>
+    <script src="material/java.js" defer></script>
     <header class="hero_small" id="top">
         <div class="menu">
             <h1><a href="index.html">ink and line</a></h1>
@@ -25,10 +25,11 @@
             </nav>
         </div>
         <!-- ハンバーガーメニュー/レスポンシブのみ -->
-         <div class="sm_nav">
-            <input id="sm_nav_input" class="sm_nav_check" type="checkbox">
-            <label for="sm_nav_input" class="sm_nav_open"><span></span></label>
-            <nav class="sm_nav_box">
+        <div class="sm_nav">
+            <button class="sm_nav_open" type="button" aria-expanded="false" aria-controls="sm_nav_box" aria-label="メニューを開く">
+                <span></span>
+            </button>
+            <nav id="sm_nav_box" class="sm_nav_box">
                 <ul class="sm_nav_menu">
                     <li><a href="index.html#news">News</a></li>
                     <li><a href="index.html#about">About</a></li>
